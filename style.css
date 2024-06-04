@@ -5,6 +5,7 @@
     --c-DarkNavy: #242742;
     --c-PaleNavy: #36384D;
     --c-Verm:#FF6155;
+    --c-VermLight: hsla(4, 100%, 67%, 15%);
     --g-1: linear-gradient(180deg, #FF6A3A, #FF527B);
 
     --f-1: "Roboto", sans-serif;
@@ -133,7 +134,11 @@ body {
 #cmp__input-container.invalid #cmp__input-error {
     opacity: 100%;
 }
-
+#cmp__input-container.invalid #cmp__email {
+    border-color: var(--c-Verm);
+    background-color: var(--c-VermLight);
+    color: var(--c-Verm);
+}
 
 
 #cmp__email, #cmp__btn 
@@ -153,6 +158,11 @@ body {
     background-color: var(--c-DarkNavy);
     padding: 1.125em 1em;
     border:none;
+    cursor: pointer;
+}
+
+#cmp__btn:hover {
+    background: var(--g-1);
 }
 
 /* Padding */
