@@ -18,7 +18,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 #cmp * { 
@@ -52,6 +51,7 @@ body {
 
 #cmp__input-label, #cmp__input-error {
     font-size: .75rem;
+    font-weight: bold;
 }
 
 #cmp__input-error {
@@ -72,3 +72,119 @@ body {
     font-size: inherit;
     color: var(--c-White);
  }
+
+
+
+ /* Layout */
+#cmp {
+    background-color: var(--c-White);
+}
+ #cmp__img-mobile {
+    display: block;
+    width: 100%;
+ }
+ #cmp__img-desktop 
+{
+    display: none;
+}
+
+#cmp__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom:2.5em;
+    gap: .625em;
+}
+
+.cmp__list-item {
+    position: relative;
+    padding-left: calc(1em + 21px);
+}
+
+.cmp__list-item::before {
+    content: '';
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left:0px;
+    top:0px;
+    background-image: url(./assets/images/icon-list.svg);
+}
+
+#cmp__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+#cmp__input-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5em;
+}
+
+#cmp__input-error {
+    margin-top: 0;
+    opacity: 0%;
+    transition: opacity 300ms;
+}
+
+#cmp__input-container.invalid #cmp__input-error {
+    opacity: 100%;
+}
+
+
+
+#cmp__email, #cmp__btn 
+{
+    border-radius: 8px;
+    width: 100%;
+}
+
+#cmp__email {
+    padding: 1em 1.5em;
+    border: solid 1px var(--c-Grey);
+}
+
+
+#cmp__btn 
+{
+    background-color: var(--c-DarkNavy);
+    padding: 1.125em 1em;
+    border:none;
+}
+
+/* Padding */
+#cmp__content {
+    padding: 2.5em 6.4%;
+}
+
+
+
+@media(min-width:768px)
+{
+    body {
+        justify-content: center;
+    }
+    #cmp {
+        display: flex;
+        align-items: stretch;
+        border-radius: 36px;
+    }
+
+    #cmp__img-desktop {
+        display: block;
+    }
+
+    #cmp__img-mobile {
+        display: none;
+    }
+
+
+    #cmp__content {
+        padding: 4.6em 4em;
+        max-width: 504px;
+    }
+    
+}
