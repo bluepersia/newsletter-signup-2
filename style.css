@@ -1,0 +1,33 @@
+:root 
+{
+    --c-White: white;
+    --c-Grey: hsla(243, 28%, 13%, 25%);
+    --c-DarkNavy: #242742;
+    --c-PaleNavy: #36384D;
+    --c-Verm:#FF6155;
+    --g-1: linear-gradient(180deg, #FF6A3A, #FF527B);
+
+    --f-1: "Roboto", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--c-PaleNavy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+* { 
+    box-sizing: border-box;
+}
+
+* :first-child {
+    margin-top: 0;
+}
+
+* :last-child {
+    margin-bottom: 0;
+}
